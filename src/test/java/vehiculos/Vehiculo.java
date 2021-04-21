@@ -53,7 +53,7 @@ public class Vehiculo {
 		return paises.get(item);
 	}
 
-	public Fabricante abricaMayorVentas() { // pais1 [colombia], pais2[venezuela], ... = 5
+	public Fabricante fabricaMayorVentas() { // pais1 [colombia], pais2[venezuela], ... = 5
 		int mayor = 0;
 		int item = 0;
 		for(int i =0; i < fabricantes.size(); i++) {
