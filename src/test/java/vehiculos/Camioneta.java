@@ -8,7 +8,7 @@ public class Camioneta extends Vehiculo {
 
 	public Camioneta(String placa, int puertas, String nombre, double precio, float peso,
 			Fabricante fabricante, boolean volco) {
-		super(placa, puertas, 90, nombre, precio, peso, "4x4", fabricante);
+		super(placa, puertas, 90, nombre, precio, peso, "4X4", fabricante);
 		// TODO Auto-generated constructor stub
 		this.volco = volco;
 		cantidaddeCamionetas = cantidaddeCamionetas + 1;
@@ -20,9 +20,6 @@ public class Camioneta extends Vehiculo {
 	}
 	
 	
-
-
-
 	public static void setCantidadCamionetas(int cantidaddeCamionetas) {
 		Camioneta.cantidaddeCamionetas = cantidaddeCamionetas;
 	}
