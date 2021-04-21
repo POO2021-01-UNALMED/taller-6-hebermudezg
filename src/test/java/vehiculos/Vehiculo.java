@@ -1,6 +1,11 @@
 package vehiculos;
+import java.util.Collections;
+import java.util.LinkedList;
 
 public class Vehiculo {
+	public static LinkedList<Pais> paises = new LinkedList<Pais>();
+	public static LinkedList<Fabricante> fabricantes = new LinkedList<Fabricante>();
+
 	String placa;
 	int puertas;
 	float velocidadMaxima;
@@ -9,10 +14,10 @@ public class Vehiculo {
 	float peso;
 	String traccion;
 	Fabricante fabricante;
-	
+
 	// para contar la cantidad de vehiculos
 	static int cantidaddeVehiculos = 0;
-	
+
 	public Vehiculo(String placa, int puertas, float velocidadMaxima, String nombre, double precio, float peso,
 			String traccion, Fabricante fabricante) {
 		super();
@@ -24,26 +29,62 @@ public class Vehiculo {
 		this.peso = peso;
 		this.traccion = traccion;
 		this.fabricante = fabricante;
-		
-		//cantidaddeVehiculos = cantidaddeVehiculos + 1;
-	}
-	
-	
-	// método para obtener la cantidad de vihiculos
-	public static int getCantidaddeVehiculos() {
-		//return getCantidaddeAtomoviles() + getCantidaddeCamionetas + getCantidaddeCamiones;
-		return cantidaddeVehiculos;
-	}
-	
-	
-	// cantidad de viculos por tipo
-	public String vehiculosPorTipo() {
-		return	"Automovil: " + Automovil.cantidaddeAtomoviles + "\n"
-				+ "Camionetas: " + Automovil.cantidaddeAtomoviles + "\n"
-				+ "Camiones: " + Automovil.cantidaddeAtomoviles;
-				
+		fabricantes.add(fabricante);
+		paises.add(fabricante.pais); // GUARDANDO LOS PAISES
+		// cantidaddeVehiculos = cantidaddeVehiculos + 1;
 	}
 
+	public Pais paisMasVendedor() { // pais1 [colombia], pais2[venezuela], ... = 5
+		int mayor = 0;
+		int item = 0;
+		for(int i =0; i < paises.size(); i++) {
+			int contador = 0;
+			for(int j = i +1 ; j < paises.size(); i++) {
+				if(paises.get(i).nombre.equals(paises.get(j).nombre)) {
+					contador +=1;					
+				}
+			}
+			
+			if(contador > mayor ) {
+				mayor  = contador;
+				item = i;
+			}
+		}
+		return paises.get(item);
+	}
+
+	public Fabricante abricaMayorVentas() { // pais1 [colombia], pais2[venezuela], ... = 5
+		int mayor = 0;
+		int item = 0;
+		for(int i =0; i < fabricantes.size(); i++) {
+			int contador = 0;
+			for(int j = i +1 ; j < fabricantes.size(); i++) {
+				if(fabricantes.get(i).nombre.equals(fabricantes.get(j).nombre)) {
+					contador +=1;					
+				}
+			}
+			
+			if(contador > mayor ) {
+				mayor  = contador;
+				item = i;
+			}
+		}
+		return fabricantes.get(item);
+
+	}
+
+	// método para obtener la cantidad de vihiculos
+	public static int getCantidaddeVehiculos() {
+		// return getCantidaddeAtomoviles() + getCantidaddeCamionetas +
+		// getCantidaddeCamiones;
+		return cantidaddeVehiculos;
+	}
+
+	// cantidad de viculos por tipo
+	public String vehiculosPorTipo() {
+		return "Automovil: " + Automovil.cantidaddeAtomoviles + "\n" + "Camionetas: " + Camioneta.cantidaddeCamionetas
+				+ "\n" + "Camiones: " + Camion.cantidaddeCamiones;
+	}
 
 	public String getPlaca() {
 		return placa;
@@ -108,8 +149,5 @@ public class Vehiculo {
 	public void setFabricante(Fabricante fabricante) {
 		this.fabricante = fabricante;
 	}
-	
-	
-	
 
 }
