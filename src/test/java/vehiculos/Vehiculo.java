@@ -20,7 +20,7 @@ public class Vehiculo {
 
 	public Vehiculo(String placa, int puertas, float velocidadMaxima, String nombre, double precio, float peso,
 			String traccion, Fabricante fabricante) {
-		super();
+	
 		this.placa = placa;
 		this.puertas = puertas;
 		this.velocidadMaxima = velocidadMaxima;
@@ -31,7 +31,7 @@ public class Vehiculo {
 		this.fabricante = fabricante;
 		fabricantes.add(fabricante);
 		paises.add(fabricante.pais); // GUARDANDO LOS PAISES
-		// cantidaddeVehiculos = cantidaddeVehiculos + 1;
+		cantidaddeVehiculos = cantidaddeVehiculos + 1;
 	}
 
 	public Pais paisMasVendedor() { // pais1 [colombia], pais2[venezuela], ... = 5
