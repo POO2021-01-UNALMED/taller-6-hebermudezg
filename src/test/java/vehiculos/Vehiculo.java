@@ -81,7 +81,7 @@ public class Vehiculo {
 	}
 	
 	
-	public static void setCantidaddeVehiculos(int cantidaddeVehiculos) {
+	public static void setCantidadVehiculos(int cantidaddeVehiculos) {
 		Vehiculo.cantidaddeVehiculos = cantidaddeVehiculos;
 	}
 

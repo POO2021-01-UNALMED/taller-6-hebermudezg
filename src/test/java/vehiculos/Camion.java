@@ -16,12 +16,12 @@ public class Camion extends Vehiculo {
 	}
 	
 	
-	public static int getCantidaddeCamiones() {
+	public static int getCantidadCamiones() {
 		return cantidaddeCamiones;
 	}
 	
 	
-	public static void setCantidaddeCamiones(int cantidaddeCamiones) {
+	public static void setCantidadCamiones(int cantidaddeCamiones) {
 		Camion.cantidaddeCamiones = cantidaddeCamiones;
 	}
 
