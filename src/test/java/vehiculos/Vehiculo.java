@@ -1,5 +1,5 @@
 package vehiculos;
-import java.util.Collections;
+//import java.util.Collections;
 import java.util.LinkedList;
 
 public class Vehiculo {
