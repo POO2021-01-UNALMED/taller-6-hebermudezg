@@ -5,7 +5,6 @@ public class Fabricante {
 	Pais pais;
 	
 	public Fabricante(String nombre, Pais pais) {
-		super();
 		this.nombre = nombre;
 		this.pais = pais;
 	}
