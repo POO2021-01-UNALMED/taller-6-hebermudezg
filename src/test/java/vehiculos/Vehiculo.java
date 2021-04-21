@@ -79,6 +79,11 @@ public class Vehiculo {
 		// getCantidaddeCamiones;
 		return cantidaddeVehiculos;
 	}
+	
+	
+	public static void setCantidaddeVehiculos(int cantidaddeVehiculos) {
+		Vehiculo.cantidaddeVehiculos = cantidaddeVehiculos;
+	}
 
 	// cantidad de viculos por tipo
 	public String vehiculosPorTipo() {

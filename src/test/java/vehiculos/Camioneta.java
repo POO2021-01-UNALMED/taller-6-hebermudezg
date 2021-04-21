@@ -18,7 +18,14 @@ public class Camioneta extends Vehiculo {
 	public static int getCantidaddeCamionetas() {
 		return cantidaddeCamionetas;
 	}
+	
+	
 
+
+
+	public static void setCantidaddeCamionetas(int cantidaddeCamionetas) {
+		Camioneta.cantidaddeCamionetas = cantidaddeCamionetas;
+	}
 
 
 	public boolean isVolco() {

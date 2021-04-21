@@ -18,7 +18,10 @@ public class Automovil extends Vehiculo {
 	public static int getCantidaddeAtomoviles() {
 		return cantidaddeAtomoviles;
 	}
-
+	
+	public static void setCantidaddeAtomoviles(int cantidaddeAtomoviles) {
+		Automovil.cantidaddeAtomoviles = cantidaddeAtomoviles;
+	}
 
 
 	public int getPuestos() {
