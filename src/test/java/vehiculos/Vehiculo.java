@@ -14,9 +14,9 @@ public class Vehiculo {
 	float peso;
 	String traccion;
 	Fabricante fabricante;
-
+	
 	// para contar la cantidad de vehiculos
-	static int cantidaddeVehiculos = 0;
+	public static int cantidaddeVehiculos = 0;
 
 	public Vehiculo(String placa, int puertas, float velocidadMaxima, String nombre, double precio, float peso,
 			String traccion, Fabricante fabricante) {
@@ -74,7 +74,7 @@ public class Vehiculo {
 	}
 
 	// método para obtener la cantidad de vihiculos
-	public static int getCantidaddeVehiculos() {
+	public static int getCantidadVehiculos() {
 		// return getCantidaddeAtomoviles() + getCantidaddeCamionetas +
 		// getCantidaddeCamiones;
 		return cantidaddeVehiculos;
@@ -82,8 +82,10 @@ public class Vehiculo {
 
 	// cantidad de viculos por tipo
 	public String vehiculosPorTipo() {
-		return "Automovil: " + Automovil.cantidaddeAtomoviles + "\n" + "Camionetas: " + Camioneta.cantidaddeCamionetas
-				+ "\n" + "Camiones: " + Camion.cantidaddeCamiones;
+		return 
+				"Automoviles: " + Automovil.cantidaddeAtomoviles
+				+ "Camionetas: " + Camioneta.cantidaddeCamionetas
+				+ "Camiones: " + Camion.cantidaddeCamiones;
 	}
 
 	public String getPlaca() {

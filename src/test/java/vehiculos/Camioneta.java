@@ -4,7 +4,7 @@ public class Camioneta extends Vehiculo {
 	boolean volco;
 	//float velocidadMaxima;
 	//String traccion;
-	static int cantidaddeCamionetas=0;
+	public static int cantidaddeCamionetas=0;
 
 	public Camioneta(String placa, int puertas, String nombre, double precio, float peso,
 			Fabricante fabricante, boolean volco) {
