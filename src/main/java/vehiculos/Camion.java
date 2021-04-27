@@ -33,6 +33,12 @@ public class Camion extends Vehiculo {
 	public void setEjes(int ejes) {
 		this.ejes = ejes;
 	}
+
+
+	@Override
+	public String toString() {
+		return "Camion [ejes=" + ejes + "]";
+	}
 	
 	
 	
